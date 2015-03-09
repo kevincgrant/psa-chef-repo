@@ -31,12 +31,12 @@ echo "Installed chef scripts to ${CHEF_BASE}"
 
 ## Run chef recipies
 
-echo ""
-echo "Running chef recipies..."
-sleep 3
+#echo ""
+#echo "Running chef recipies..."
+#sleep 3
 
-cd ${CHEF_BASE}
-chef-client --local-mode -c config.rb -j runlist.json
+#cd ${CHEF_BASE}
+#chef-client --local-mode -c config.rb -j runlist.json
 
-echo "Finished running chef recipies"
+#echo "Finished running chef recipies"
 
