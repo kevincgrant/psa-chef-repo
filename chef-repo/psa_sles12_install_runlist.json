@@ -1,0 +1,3 @@
+{
+   "run_list": [ "recipe[psa_sles12_install::motd]","recipe[psa_sles12_install::packages]","recipe[psa_sles12_install::directories]" ]
+}

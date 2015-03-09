@@ -1,0 +1,59 @@
+### Base Install
+#
+## Expert
+# Changed default runlevel to 3
+#
+## Software
+# -AppArmor
+# -GNOME Desktop Environment
+# -X Window System
+# -Print Server
+# -Web-Based Enterprise Manager
+# +C/C++ Compiler and Tools
+#
+## Details > Search
+# +vsftpd
+# +ncftp
+# +sysstat
+# +dhcp-server
+#
+## Other
+# Installed VMware Tools
+# /etc/sysconfig/network/config - FORCE_PERSISTENT_NAMES=no
+# Cleaned out /etc/udev/rules.d/70-persistent-net.rules
+# Added 10.12.122.23 to reslove.conf
+#
+## 02/21/2014
+# mkdir /mnt/dvd
+# mkdir /usr/local/modiv
+# Installed MW 5.00.0
+# Edited pg_hba.conf
+# Installed OSSEC
+# Installed NRPE
+# Installed 15.10.0 Product
+# Installed Marsh_PSADR
+# Copied over msh_marsh_psa_customization_15.10.0.iso
+# Added psadr to /etc/sudoers
+
+# Installed NRPE
+# zypper in nrpe
+# vi /etc/nrpe.cfg
+# changed allowed_hosts=127.0.0.1 to allowed_hosts=172.18.3.59
+# systemctl enable nrpe
+# systemctl start nrpe
+
+# Installed OSSEC
+# Followed instructions provided by Marsh
+
+# Installed syslog-ng
+#zypper in libnet
+#rpm -ivh libevtlog0-0.2.12-28.2.x86_64.rpm
+#rpm -ivh syslog-ng-3.6.2-162.1.x86_64.rpm
+
+# Added glassfish and apache startup scripts to /etc/init.d/boot.local
+# Note: This is temporary fix until we fix startup issues
+
+## psadr files
+# To see a list of files please view psadr_files.txt
+# Created psadr_files.tgz by running tar cfPz psadr_files.tgz `cat psadr_files.txt`
+
