@@ -13,10 +13,16 @@ package 'vsftpd'
 package 'dhcp-server'
 
 template '/etc/ntp.conf' do
-source 'ntp.conf.erb'
+   source 'ntp.conf.erb'
+   mode '0640'
+   owner 'root'
+   group 'ntp'
 end
 
-template '/etc/vsftpd.conf' do
-source 'vsftpd.conf.erb'
+cookbook_file '/etc/vsftpd.conf' do
+   source 'vsftpd.conf'
+   mode '0600'
+   owner 'root'
+   group 'root'
 end
 

@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-template '/etc/motd' do
- source 'motd.erb'
+cookbook_file '/etc/motd' do
+   source 'motd'
+   mode '0644'
+   owner 'root'
+   group 'root'
 end
